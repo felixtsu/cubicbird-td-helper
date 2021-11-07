@@ -4,8 +4,15 @@ namespace tdhelper {
     let _shouldDrawMoneyIcon = false;
 
     //%block
-    export function distanceOf(x:number, y:number, sprite:Sprite):number {
+    //%blockId=cbtdhelperDistanceOfSpriteAndPosition block="%sprite=variables_get(mySprite)到坐标$x, $y的距离"
+    export function distanceOfSpriteAndPosition(x:number, y:number, sprite:Sprite):number {
         return Math.sqrt(Math.pow(x - sprite.x, 2) + Math.pow(y - sprite.y, 2))
+    }
+
+    //%block
+    //%blockId=cbtdhelperDistanceOfSprites block="%sprite=variables_get(mySprite) %otherSprite=variables_get(mySprite)的距离"
+    export function distanceOf(sprite:Sprite, otherSprite: Sprite): number {
+        return Math.sqrt(Math.pow(otherSprite.x - sprite.x, 2) + Math.pow(otherSprite.y - sprite.y, 2))
     }
 
 
