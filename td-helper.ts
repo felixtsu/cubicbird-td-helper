@@ -4,6 +4,12 @@ namespace tdhelper {
     let _shouldDrawMoneyIcon = false;
 
     //%block
+    export function distanceOf(x:number, y:number, sprite:Sprite):number {
+        return Math.sqrt(Math.pow(x - sprite.x, 2) + Math.pow(y - sprite.y, 2))
+    }
+
+
+    //%block
     export function drawMoneyIcon(on :boolean) {
         _shouldDrawMoneyIcon = on;
     }
